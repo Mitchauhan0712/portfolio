@@ -20,7 +20,7 @@ const Portfolio = () => {
     {
       id: 3,
       src: PortfolioHeading,
-      demoLink: "https://mit-portfolio-app.netlify.app",
+      demoLink: "https://mitchauhan-portfolio-app.netlify.app",
       codeLink: "https://github.com/Mitchauhan0712/portfolio",
     },
   ];
