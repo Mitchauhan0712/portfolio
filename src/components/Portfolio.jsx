@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { FaGithub, FaExternalLinkAlt, FaEye } from "react-icons/fa";
-import { SiReact, SiTailwindcss, SiNodedotjs, SiMongodb, SiJavascript, SiExpress, SiNextdotjs, SiPostgresql, SiSocketdotio, SiStripe } from "react-icons/si";
+import { FaGithub, FaExternalLinkAlt, FaEye, FaReact, FaJs, FaNodeJs } from "react-icons/fa";
+import { SiTailwindcss, SiMongodb, SiExpress, SiNextdotjs, SiPostgresql, SiSocketdotio } from "react-icons/si";
 import Dashboard from "../assets/Heading.gif";
 import WeatherApp from "../assets/WeatherappHeading.gif";
 import PortfolioHeading from "../assets/PortfolioHeading.gif";
@@ -16,9 +16,9 @@ const Portfolio = () => {
       fullDescription: "Modern admin dashboard featuring real-time analytics, user management system, data visualization with Chart.js, and responsive design. Built with React and integrated with Firebase for backend services.",
       category: "frontend",
       techStack: [
-        { name: "React", icon: <SiReact className="text-blue-500" /> },
+        { name: "React", icon: <FaReact className="text-blue-500" /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-500" /> },
-        { name: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> }
+        { name: "JavaScript", icon: <FaJs className="text-yellow-500" /> }
       ],
       image: Dashboard,
       demoLink: "https://mit-dashboard.netlify.app/",
@@ -32,8 +32,8 @@ const Portfolio = () => {
       fullDescription: "Real-time weather application with location-based forecasts, interactive maps, and beautiful UI. Features include current weather, 7-day forecast, and weather alerts.",
       category: "frontend",
       techStack: [
-        { name: "React", icon: <SiReact className="text-blue-500" /> },
-        { name: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> }
+        { name: "React", icon: <FaReact className="text-blue-500" /> },
+        { name: "JavaScript", icon: <FaJs className="text-yellow-500" /> }
       ],
       image: WeatherApp,
       demoLink: "https://mit-wheather-app.netlify.app",
@@ -47,7 +47,7 @@ const Portfolio = () => {
       fullDescription: "Modern portfolio website with smooth animations, responsive design, and interactive elements. Features include project showcase, skills display, and contact form.",
       category: "frontend",
       techStack: [
-        { name: "React", icon: <SiReact className="text-blue-500" /> },
+        { name: "React", icon: <FaReact className="text-blue-500" /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-500" /> }
       ],
       image: PortfolioHeading,
@@ -65,10 +65,9 @@ const Portfolio = () => {
       fullDescription: "Complete e-commerce platform with user authentication, product management, shopping cart, payment integration with Stripe, and admin dashboard.",
       category: "fullstack",
       techStack: [
-        { name: "React", icon: <SiReact className="text-blue-500" /> },
-        { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> },
-        { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
-        { name: "Stripe", icon: <SiStripe className="text-purple-500" /> }
+        { name: "React", icon: <FaReact className="text-blue-500" /> },
+        { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
+        { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> }
       ],
       placeholder: true
     },
@@ -79,9 +78,8 @@ const Portfolio = () => {
       fullDescription: "Real-time task management application with team collaboration, progress tracking, notifications, and project management features.",
       category: "fullstack",
       techStack: [
-        { name: "React", icon: <SiReact className="text-blue-500" /> },
+        { name: "React", icon: <FaReact className="text-blue-500" /> },
         { name: "Express", icon: <SiExpress className="text-gray-600" /> },
-        { name: "Socket.io", icon: <SiSocketdotio className="text-gray-800" /> },
         { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" /> }
       ],
       placeholder: true
@@ -94,7 +92,7 @@ const Portfolio = () => {
       category: "fullstack",
       techStack: [
         { name: "Next.js", icon: <SiNextdotjs className="text-gray-900" /> },
-        { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> },
+        { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
         { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> }
       ],
       placeholder: true
