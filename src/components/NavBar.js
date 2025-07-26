@@ -1,85 +1,101 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const links = [
-    {
-      id: 1,
-      link: "home",
-    },
-    {
-      id: 2,
-      link: "about",
-    },
-    {
-      id: 3,
-      link: "skills",
-    },
-    {
-      id: 4,
-      link: "portfolio",
-    },
-    {
-      id: 5,
-      link: "experience",
-    },
-    {
-      id: 6,
-      link: "contact",
-    },
+    { id: 1, link: "home" },
+    { id: 2, link: "about" },
+    { id: 3, link: "skills" },
+    { id: 4, link: "portfolio" },
+    { id: 5, link: "experience" },
+    { id: 6, link: "contact" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setScrolled(offset > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="flex justify-between items-center w-full h-18 px-4 text-white bg-black fixed">
-      <div>
-        <h1 className="text-3xl sm:text-5xl md:text-5xl p-2 font-signature ml-2">
-          Mit Chauhan
-        </h1>
-      </div>
-
-      <ul className="hidden md:flex">
-        {links.map(({ id, link }) => (
-          <li
-            key={id}
-            className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
-          >
-            <Link to={link} smooth duration={500}>
-              {link}
-            </Link>
-          </li>
-        ))}
-      </ul>
-
-      <div
-        onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
-      >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
-      </div>
-
-      {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
-          {links.map(({ id, link }) => (
-            <li
-              key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-4xl"
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${
+      scrolled 
+        ? 'bg-white/80 backdrop-blur-lg shadow-soft' 
+        : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link 
+              to="home" 
+              smooth 
+              duration={500}
+              className="text-2xl font-bold font-poppins text-secondary-900 hover:text-primary-600 transition-colors duration-300 cursor-pointer"
             >
+              Mit Chauhan
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <ul className="flex space-x-8">
+              {links.map(({ id, link }) => (
+                <li key={id}>
+                  <Link
+                    to={link}
+                    smooth
+                    duration={500}
+                    className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium capitalize cursor-pointer transition-all duration-300 relative group"
+                  >
+                    {link}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setNav(!nav)}
+              className="text-secondary-700 hover:text-primary-600 focus:outline-none focus:text-primary-600 transition-colors duration-300"
+            >
+              {nav ? <FaTimes size={24} /> : <FaBars size={24} />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      {nav && (
+        <div className="md:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-lg shadow-medium">
+            {links.map(({ id, link }) => (
               <Link
-                onClick={() => setNav(!nav)}
+                key={id}
                 to={link}
                 smooth
-                duration={1000}
+                duration={500}
+                onClick={() => setNav(false)}
+                className="text-secondary-700 hover:text-primary-600 block px-3 py-2 text-base font-medium capitalize cursor-pointer transition-colors duration-300"
               >
                 {link}
               </Link>
-            </li>
-          ))}
-        </ul>
+            ))}
+          </div>
+        </div>
       )}
-    </div>
+    </nav>
   );
 };
 
