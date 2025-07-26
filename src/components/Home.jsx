@@ -6,7 +6,7 @@ import Typewriter from "typewriter-effect";
 
 const Home = () => {
   const [, setProfessionIndex] = useState(0);
-  const professions = ["Frontend Developer", "Web Designer", "React Developer"];
+  const professions = ["Software Developer", "Full Stack Developer", "React Developer"];
 
   useEffect(() => {
     const interval = setInterval(() => {
