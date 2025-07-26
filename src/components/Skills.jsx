@@ -2,7 +2,6 @@ import React from "react";
 import { 
   FaReact, FaJs, FaHtml5, FaCss3Alt, FaNodeJs, FaGitAlt, FaGithub, FaFigma, FaDocker
 } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiExpress, SiMongodb, SiPostgresql, SiVisualstudiocode, SiPostman } from "react-icons/si";
 
 const Skills = () => {
   const skillCategories = [
