@@ -14,15 +14,25 @@ const About = () => {
         </div>
 
         <p className="text-xl mt-20">
-        I am currently in my 8th semester pursuing a Bachelor's degree in Computer Science and Engineering from Parul University. With a keen aspiration to become a Full Stack MERN (MongoDB, Express.js, React.js, Node.js) Developer, I have dedicated myself to mastering various aspects of both frontend and backend development. My experience primarily lies in frontend development, where I have honed my skills in technologies such as React.js and Tailwind CSS to craft visually appealing and highly functional user interfaces. Additionally, I have hands-on experience in working with MongoDB and integrating RESTful APIs, enabling seamless communication between frontend and backend components. With my versatile skill set and eagerness to learn and grow, I am confident that I can be a valuable asset to any team. Feel free to get in touch to explore how I can contribute to your projects.
-
-
+          I'm a passionate Software Developer with a strong foundation in both frontend and backend technologies. 
+          My journey began with frontend development, where I mastered React.js and modern CSS frameworks, 
+          but I've since expanded my expertise to include full-stack development with Node.js, Express, and MongoDB.
         </p>
 
         <br />
 
         <p className="text-xl">
-        Let's collaborate and build something great together!
+          What sets me apart is my ability to bridge the gap between beautiful user interfaces and robust backend systems. 
+          I thrive on solving complex problems, writing clean and maintainable code, and creating seamless user experiences 
+          that scale effectively. My technical skills are complemented by strong problem-solving abilities, attention to detail, 
+          and a collaborative mindset that helps teams deliver exceptional results.
+        </p>
+
+        <br />
+
+        <p className="text-xl">
+          I'm always eager to learn new technologies and take on challenging projects that push the boundaries of what's possible. 
+          Let's collaborate and build something amazing together!
         </p>
       </div>
     </div>
