@@ -13,8 +13,8 @@ const Skills = () => {
         { name: "JavaScript", icon: <FaJs className="text-yellow-500" />, level: 90 },
         { name: "HTML5", icon: <FaHtml5 className="text-orange-500" />, level: 95 },
         { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" />, level: 90 },
-        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-500" />, level: 85 },
-        { name: "Next.js", icon: <SiNextdotjs className="text-gray-900" />, level: 80 },
+        { name: "Tailwind CSS", icon: <div className="text-cyan-500">🎨</div>, level: 85 },
+        { name: "Next.js", icon: <div className="text-gray-900">⚡</div>, level: 80 },
       ]
     },
     {
@@ -22,9 +22,9 @@ const Skills = () => {
       color: "from-green-500 to-emerald-600",
       skills: [
         { name: "Node.js", icon: <FaNodeJs className="text-green-500" />, level: 85 },
-        { name: "Express", icon: <SiExpress className="text-gray-600" />, level: 80 },
-        { name: "MongoDB", icon: <SiMongodb className="text-green-600" />, level: 85 },
-        { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" />, level: 75 },
+        { name: "Express", icon: <div className="text-gray-600">🚀</div>, level: 80 },
+        { name: "MongoDB", icon: <div className="text-green-600">🍃</div>, level: 85 },
+        { name: "PostgreSQL", icon: <div className="text-blue-600">🐘</div>, level: 75 },
       ]
     },
     {
@@ -33,8 +33,8 @@ const Skills = () => {
       skills: [
         { name: "Git", icon: <FaGitAlt className="text-orange-500" />, level: 90 },
         { name: "GitHub", icon: <FaGithub className="text-gray-800" />, level: 90 },
-        { name: "VS Code", icon: <SiVisualstudiocode className="text-blue-500" />, level: 95 },
-        { name: "Postman", icon: <SiPostman className="text-orange-500" />, level: 85 },
+        { name: "VS Code", icon: <div className="text-blue-500">💻</div>, level: 95 },
+        { name: "Postman", icon: <div className="text-orange-500">📮</div>, level: 85 },
         { name: "Figma", icon: <FaFigma className="text-purple-500" />, level: 70 },
         { name: "Docker", icon: <FaDocker className="text-blue-500" />, level: 65 },
       ]
