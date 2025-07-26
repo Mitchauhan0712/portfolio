@@ -34,12 +34,9 @@ const Home = () => {
             />
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-            My expertise centers on React and Tailwind CSS, where I excel in
-            utilizing React's component-based architecture and Tailwind's
-            utility-first approach. With these tools, I craft scalable,
-            maintainable user interfaces, elevating web development to new
-            heights, delivering exceptional experiences efficiently and
-            elegantly.
+            Crafting scalable software with React, Node.js, and modern web technologies. 
+            I specialize in building full-stack applications that deliver exceptional user 
+            experiences through clean code, robust architecture, and innovative solutions.
           </p>
 
           <div>
