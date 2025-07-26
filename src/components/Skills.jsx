@@ -1,9 +1,8 @@
 import React from "react";
 import { 
-  SiReact, SiJavascript, SiHtml5, SiCss3, SiTailwindcss, SiNextdotjs,
-  SiNodedotjs, SiExpress, SiMongodb, SiPostgresql,
-  SiGit, SiGithub, SiVisualstudiocode, SiPostman, SiFigma, SiDocker
-} from "react-icons/si";
+  FaReact, FaJs, FaHtml5, FaCss3Alt, FaNodeJs, FaGitAlt, FaGithub, FaFigma, FaDocker
+} from "react-icons/fa";
+import { SiTailwindcss, SiNextdotjs, SiExpress, SiMongodb, SiPostgresql, SiVisualstudiocode, SiPostman } from "react-icons/si";
 
 const Skills = () => {
   const skillCategories = [
@@ -11,34 +10,34 @@ const Skills = () => {
       title: "Frontend Development",
       color: "from-primary-500 to-blue-600",
       skills: [
-        { name: "React", icon: <SiReact />, level: 95 },
-        { name: "JavaScript", icon: <SiJavascript />, level: 90 },
-        { name: "HTML5", icon: <SiHtml5 />, level: 95 },
-        { name: "CSS3", icon: <SiCss3 />, level: 90 },
-        { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 85 },
-        { name: "Next.js", icon: <SiNextdotjs />, level: 80 },
+        { name: "React", icon: <FaReact className="text-blue-500" />, level: 95 },
+        { name: "JavaScript", icon: <FaJs className="text-yellow-500" />, level: 90 },
+        { name: "HTML5", icon: <FaHtml5 className="text-orange-500" />, level: 95 },
+        { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" />, level: 90 },
+        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-500" />, level: 85 },
+        { name: "Next.js", icon: <SiNextdotjs className="text-gray-900" />, level: 80 },
       ]
     },
     {
       title: "Backend Development",
       color: "from-green-500 to-emerald-600",
       skills: [
-        { name: "Node.js", icon: <SiNodedotjs />, level: 85 },
-        { name: "Express", icon: <SiExpress />, level: 80 },
-        { name: "MongoDB", icon: <SiMongodb />, level: 85 },
-        { name: "PostgreSQL", icon: <SiPostgresql />, level: 75 },
+        { name: "Node.js", icon: <FaNodeJs className="text-green-500" />, level: 85 },
+        { name: "Express", icon: <SiExpress className="text-gray-600" />, level: 80 },
+        { name: "MongoDB", icon: <SiMongodb className="text-green-600" />, level: 85 },
+        { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" />, level: 75 },
       ]
     },
     {
       title: "Tools & Technologies",
       color: "from-accent-500 to-purple-600",
       skills: [
-        { name: "Git", icon: <SiGit />, level: 90 },
-        { name: "GitHub", icon: <SiGithub />, level: 90 },
-        { name: "VS Code", icon: <SiVisualstudiocode />, level: 95 },
-        { name: "Postman", icon: <SiPostman />, level: 85 },
-        { name: "Figma", icon: <SiFigma />, level: 70 },
-        { name: "Docker", icon: <SiDocker />, level: 65 },
+        { name: "Git", icon: <FaGitAlt className="text-orange-500" />, level: 90 },
+        { name: "GitHub", icon: <FaGithub className="text-gray-800" />, level: 90 },
+        { name: "VS Code", icon: <SiVisualstudiocode className="text-blue-500" />, level: 95 },
+        { name: "Postman", icon: <SiPostman className="text-orange-500" />, level: 85 },
+        { name: "Figma", icon: <FaFigma className="text-purple-500" />, level: 70 },
+        { name: "Docker", icon: <FaDocker className="text-blue-500" />, level: 65 },
       ]
     }
   ];
@@ -77,7 +76,7 @@ const Skills = () => {
                     style={{ animationDelay: `${(categoryIndex * 0.2) + (skillIndex * 0.1)}s` }}
                   >
                     <div className="flex items-center mb-4">
-                      <div className={`text-3xl bg-gradient-to-r ${category.color} bg-clip-text text-transparent mr-4 group-hover:scale-110 transition-transform duration-300`}>
+                      <div className="text-3xl mr-4 group-hover:scale-110 transition-transform duration-300">
                         {skill.icon}
                       </div>
                       <h4 className="text-xl font-semibold text-secondary-900">{skill.name}</h4>
